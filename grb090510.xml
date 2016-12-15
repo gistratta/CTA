@@ -6,13 +6,13 @@
     !   <parameter name="Index"       scale="-1"    value="2.1" min="0.0"   max="3.0"   free="1"/>
     !   <parameter name="PivotEnergy" scale="1e3"   value="1"  min="0.01"  max="1000.0" free="0"/>
     !</spectrum> -->
-    <spectrum type="PowerLaw">
-        <parameter scale="1e-05" name="PhotonFlux" min="1e-07" max="1000.0"    value="80.0" free="1"/>
+    <spectrum type="PowerLaw2">
+        <parameter scale="1e-05" name="Integral" min="1e-07" max="1000.0"    value="80.0" free="1"/>
         <parameter scale="1.0"   name="Index"      min="-5.0"  max="+5.0"      value="-2.1" free="1"/>
         <parameter scale="1.0"   name="LowerLimit" min="10.0"  max="1000000.0" value="100.0" free="0"/>
         <parameter scale="1.0"   name="UpperLimit" min="10.0"  max="1000000.0" value="10000.0" free="0"/>
     </spectrum>
-    <spatialModel type="PointSource">
+    <spatialModel type="SkyDirFunction">
       <parameter name="RA"  scale="1.0" value="333.555" min="-360" max="360" free="0"/>
       <parameter name="DEC" scale="1.0" value="-26.583" min="-90"  max="90"  free="0"/>
     </spatialModel>
@@ -21,7 +21,7 @@
     <spectrum type="PowerLaw">	
       <parameter name="Prefactor"   scale="1.0"  value="1.0"  min="1e-3" max="1e+3"   free="1"/>
       <parameter name="Index"       scale="1.0"  value="0.0"  min="-5.0" max="+5.0"   free="1"/>
-      <parameter name="PivotEnergy" scale="1e6"  value="1.0"  min="0.01" max="1000.0" free="0"/>
+      <parameter name="Scale" scale="1e6"  value="1.0"  min="0.01" max="1000.0" free="0"/>
     </spectrum>
   </source>	
 </source_library>
